@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="store">
+        <img src="./assets/img/cart_bg.svg" class="store__cartbg">
+
+        <div class="store__content">
+            <div class="store__content_header">
+                <div class="store__content_header-logo">
+                    <h1 id="market-title"></h1>
+                    <h2>IN THIS MENU YOU CAN MAKE YOUR MONEY LEGAL, ITS EASY, JUST WRITE THE SUMM OF YOUR MONEY AND PRESS ENTER OR BUTTON.</h2>
+                </div>
+                <div class="store__content_header-category">
+                    <div class="store__content_header-category_money">
+                        <b>$</b>
+                        <span id="myMoney">0</span>
+                    </div>
+                    <div class="store__content_header-category_list">
+                        <button onclick="backCategory()" class="arrow">
+                            <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 1L1.5 6.5L7 12" stroke="white"/>
+                            </svg>
+                        </button>
+                        <ul id="categoryList">
+                            <li id="all" onclick="selectCategory('all')" class="active">ALL</li>
+                            <!-- <li>category name</li>
+                            <li>category name</li>
+                            <li>category name</li>
+                            <li>category name</li> -->
+                        </ul>
+                        <button onclick="nextCategory()" class="arrow">
+                            <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6.5 6.5L1 12" stroke="white"/>
+                            </svg>                                
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="store__content_items"></div>
+        </div>
+        <div class="store__cart">
+            <div class="store__cart_logo">
+                <h1>SHOPPING<b>CART</b></h1>
+                <h2>YOUR ITEMS ARE HERE, ENJOY</h2>
+            </div>
+
+            <ul id="basket">
+            </ul>
+
+            <div class="store__cart_total">
+                <div class="store__cart_total-text">
+                    <h1>in case</h1>
+                    <h2 id="totalCost">$0.00    </h2>
+                </div>
+                
+                <div class="store__cart_total-buttons">
+                    <button class="methods" onclick="selectMethod('cash')"><img id="cash" src="./assets/img/cash.svg" alt=""></button>
+                    <button class="methods" onclick="selectMethod('bank')"><img id="bank" src="./assets/img/bank.svg" alt=""></button>
+                </div>
+                <div onclick="buy()" class="buy-area">
+                    <p>BUY</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
